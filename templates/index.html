@@ -1,0 +1,35 @@
+
+{% extends "base.html" %} {% block content %}
+
+
+<h2 style="text-align: center; margin-bottom: 70px;">Plant Disease Detection</h2>
+
+
+
+<div>
+    <form id="upload-file" method="post" enctype="multipart/form-data" style="margin-left: 43%; margin-bottom: 50px;">
+        <label for="imageUpload" class="upload-label">
+            Choose...
+        </label>
+        <input type="file" name="file" id="imageUpload" accept=".png, .jpg, .jpeg">
+    </form>
+
+    <div class="image-section" style="display:none; margin-left: 38%; margin-bottom: 30px;">
+        <div class="img-preview">
+            <div id="imagePreview">
+            </div>
+        </div>
+        <div style="margin-bottom: 50px;">
+            <button type="button" class="btn btn-primary btn-lg " id="btn-predict">Predict!</button>
+        </div>
+    </div>
+
+    <div class="loader" style="display:none; margin-left: 43%;"></div>
+
+    <h3 id="result" style="margin-left: 38%; margin-bottom: 50px;">
+        <span> </span>
+    </h3>
+
+</div>
+
+{% endblock %}
